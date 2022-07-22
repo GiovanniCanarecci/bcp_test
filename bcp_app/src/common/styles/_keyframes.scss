@@ -1,0 +1,5 @@
+@keyframes nudge-left {
+    0% {transform: translateX(0)}
+    50% {transform: translateX(-.2rem)}
+    100% {transform: translateX(0)}
+}

@@ -1,0 +1,38 @@
+#roles-form {
+    width: 49em;
+    max-width: 98%;
+    max-width: calc(100% - 2em);
+    padding: 2em;
+    border: 1px solid var(--dark-1);
+    border-radius: .4em;
+    background: #fffa;
+    backdrop-filter: blur(32px);
+
+    h1 {
+        margin: .5em auto 1em;
+        text-align: center;
+    }
+
+    .title-roles{
+        font-weight: 700
+    }
+
+    .form-label {
+        > span {font-weight: 700}
+
+        > input,
+        > select {
+            display: block;
+            width: 100%;
+            margin: .5em 0 2em;
+        }
+    }
+
+    [type='submit'] {margin-top: 3em}
+
+    .role-checkbox {
+        display: block;
+    
+        input {margin-right: .5em}
+    }
+}

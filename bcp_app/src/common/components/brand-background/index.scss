@@ -1,0 +1,57 @@
+@keyframes plane-slow-bobble {
+    0% {transform: translate(-1vw, 70vh) rotate(0) scale(1)}
+    25% {transform: translate(2vw, 49vh) rotate(14deg) scale(.9)}
+    50% {transform: translate(3vw, 35vh) rotate(7deg) scale(.9)}
+    100% {transform: translate(0, 21vh) rotate(0) scale(1)}
+}
+
+.brand-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #def;
+    background-size: cover;
+    background-position: 0 35vh;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    user-select: none;
+
+    &.state-0 {
+        img {left: .8em}
+    }
+
+    &.state-1 {
+        img {
+            font-size: 7em;
+            top: -14%;
+            left: 84%;
+            left: calc(100% - 2em);
+            opacity: .7;
+            filter: blur(1px);
+            animation-duration: 105s;
+        }
+    }
+
+    &.state-2 {
+        img {
+            visibility: hidden;
+            font-size: 5em;
+            top: -100%;
+            left: 200%;
+            opacity: .5;
+            filter: blur(2px);
+            animation-duration: 210s;
+        }
+    }
+
+    img {
+        position: absolute;
+        top: 14%;
+        font-size: 14em;
+        transition: all 3.5s;
+        animation: plane-slow-bobble 70s alternate infinite;
+    }
+}

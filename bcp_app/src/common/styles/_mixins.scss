@@ -1,0 +1,14 @@
+@mixin visually-hidden() {
+    opacity: .001;
+    transform: none;
+    position: fixed;
+    z-index: -1;
+    width: .1px;
+    height: .1px;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: transparent;
+    background: transparent;
+}

@@ -1,0 +1,178 @@
+@import '~common/styles/_variables.scss';
+
+:root {
+    font-size: 100%;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.4;
+    tab-size: 4;
+    height: 100%;
+    overflow: auto;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+svg {
+    flex: 0 0 auto;
+    vertical-align: middle;
+    display: block;
+    height: auto;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    line-height: 1.1;
+}
+
+[type='number'],
+[type='text'] {
+    appearance: none;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 1em;
+    border: 1px solid var(--dark-1);
+    border-radius: .2em;
+    background: var(--bg);
+    outline: none;
+    transition: border .2s;
+
+    &:focus {border-color: var(--fg)}
+}
+
+select {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 1em;
+    border: 1px solid var(--dark-1);
+    border-radius: .2em;
+    background: var(--bg);
+    outline: none;
+    cursor: pointer;
+    transition: border .2s;
+
+    &:focus {border-color: var(--fg)}
+}
+
+[type='range'] {
+    appearance: none;
+    font-family: inherit;
+    font-size: 1em;
+    padding: .5em 0;
+    background: none;
+    cursor: pointer;
+    outline: none;
+
+    &:active {
+        &::-webkit-slider-thumb {background: var(--accent)}
+        &::-moz-range-thumb {background: var(--accent)}
+    }
+
+    &::-webkit-slider-runnable-track {
+        background: var(--dark-1);
+        height: .2em;
+        height: max(.2em, 2px);
+        border-radius: 1em;
+    }
+
+    &::-moz-range-track {
+        background: var(--dark-1);
+        height: .2em;
+        height: max(.2em, 2px);
+        border-radius: 1em;
+    }
+
+    &::-webkit-slider-thumb {
+        appearance: none;
+        background: var(--fg);
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        margin-top: .2em;
+        margin-top: max(.1em, 1px);
+        transform: translateY(-50%);
+        transition: background .2s;
+    }
+
+    &::-moz-range-thumb {
+        appearance: none;
+        background: var(--fg);
+        width: 1em;
+        height: 1em;
+        border: none;
+        border-radius: 50%;
+        margin-top: .2em;
+        margin-top: max(.1em, 1px);
+        transition: background .2s;
+    }
+}
+
+[type='submit'],
+[type='button'],
+.button {
+    appearance: none;
+    font-family: inherit;
+    font-size: .9em;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    padding: 1em 2em;
+    border: 1px solid var(--dark-1);
+    margin: 1rem auto 0;
+    border-radius: 3em;
+    background: var(--fg);
+    color: var(--bg);
+    cursor: pointer;
+    outline: none;
+    transition: background .2s,
+                color .2s;
+
+    &:hover,
+    &:focus-visible
+    {color: var(--light-1)}
+
+    &:active {background: var(--dark-2)}
+
+    &:disabled {
+        background: var(--mg) !important;
+        color: var(--bg) !important;
+        cursor: default !important;
+    }
+}
+
+code {font-family: 'Code Saver', 'Consolas', monospace}
+
+
+#root {
+    display: flex;
+    height: 100%;
+    height: calc(100% - 5em);
+    margin-top: 5em;
+
+    > * {margin: auto}
+}
+
+.fa-heart {color: var(--accent)}
+.fa-coffee {color: #421}
